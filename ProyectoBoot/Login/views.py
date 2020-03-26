@@ -1,23 +1,19 @@
 from django.shortcuts import render
 from django.views.generic import View
-#importar metodo de autotenticaion
 from django.contrib.auth import authenticate
 from django.shortcuts import redirect
-
-class LandingClass(View):
-    templates='Landing/Landing.html'
-    def get(self, request, *args, **kwargs):
-        return render(request, self.templates,{})
-
-class DashboardClass(View):
-    templates = 'Dashboard/Dashboard.html'
-    def get(self, request, *args, **kargs ):
-        return render(request, self.templates,{})
+from django.contrib.auth import login as login_django
 
 class LoginClass(View):
     templates = 'Login/login.html'
 
     def get(self, request, *args, **kargs ):
+        if request.user.is_authenticated:
+            next_url = request.GET.get('next')
+            if next_url:
+                return redirect(next_url)
+            else:
+                return redirect('Dashboard:Dashboard')
         return render(request, self.templates,{} )
 
     def post(self, request, *args, **kargs ):
@@ -27,11 +23,16 @@ class LoginClass(View):
         user_sesion = authenticate(username = user_post, password = password_post)
 
         if user_sesion is not None:
-            return redirect('login:Dashboard')
-            
-            #return render(request, self.template_ok,{} )
-        else:
-            self.message = 'usuario o cantraseña incorrecto'
+                login_django(
+                    request, user_sesion
+                )
+                next_url = request.GET.get('next')
+                if next_url:
+                    return redirect(next_url)
+                else:
+                    return redirect('Dashboard:Dashboard')
+        else: 
+            self.message = 'Usuario o contraseña incorrecto'
 
 
         return render(request, self.templates, self.get_context())
