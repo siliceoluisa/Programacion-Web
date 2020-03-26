@@ -27,7 +27,7 @@ class LoginClass(View):
         user_sesion = authenticate(username = user_post, password = password_post)
 
         if user_sesion is not None:
-            return redirect('login:Dashboard')
+            return redirect('Login:dashboard')
             
             #return render(request, self.template_ok,{} )
         else:
