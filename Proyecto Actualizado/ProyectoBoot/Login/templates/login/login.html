@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div class="Contaneir">
+            <div class="mx-auto border border-primary" style="text-align: center;width: 300px; height: 500px;">
+                <img src="https://i.guim.co.uk/img/media/97ef1652ca36d1c2e553628ffca8cf95e6d01c03/732_829_3993_2395/master/3993.jpg?width=700&quality=85&auto=format&fit=max&s=04e1c898bdc940838714e0c7a6c8a4f8" alt="..." class="rounded-circle" style="width: 200px;">
+                <br>
+                <br>
+                <form action="" method="POST">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        <div class="col">
+                            <input type="text" class="form-control border border-primary " placeholder="Correo" name="user" required>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-grop">
+                        <div class="col">
+                            <input type="password" class="form-control border border-primary" placeholder="Contraseña" name="password"  required>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Accerder</button>
+                    </div>
+                    <br>
+                    {% if error%}
+                        <div class="lert alert-warning" role="alert">
+                            {{error}}
+                        </div>
+                    {% endif%}
+                </form>
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
