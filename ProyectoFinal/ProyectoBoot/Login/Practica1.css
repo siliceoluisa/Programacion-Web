@@ -1,0 +1,123 @@
+.Colorh1{
+ color:black;
+ font-size: 100pt;
+ font-family: 'Courier New', Courier, monospace;
+ background-color: bisque;
+ text-align: center; 
+}
+.Colorh2
+{
+    color: blueviolet;
+    font-size: 10pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;    
+    background-color: chartreuse;
+}
+.Colorh3
+{
+    color:aquamarine;
+    font-size: 30pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;   
+    background-color:burlywood;
+}
+.Colorh4
+{
+    color: brown;
+    font-size: 70pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;    
+    background-color:cadetblue;
+}
+.Colorh5
+{
+    color:blanchedalmond;
+    font-size: 60pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;    
+    background-color:chocolate;
+}
+.Colorh6
+{
+    color: rgb(43, 226, 165);
+    font-size: 50pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;    
+    background-color:coral;
+
+}
+.Colorh7
+{
+    color: cyan;
+    font-size: 40pt;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;    
+    background-color: antiquewhite;
+}
+.Colorh8
+{
+    color: rgb(196, 170, 221);
+    font-size: 30pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;    
+    background-color: rgb(58, 77, 40);
+}
+.Colorh9
+{
+    color: rgb(153, 43, 226);
+    font-size: 10pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;    
+    background-color: rgb(228, 156, 200);
+}
+.Colorh10
+{
+    color: rgb(224, 40, 194);
+    font-size: 10pt;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;    
+    background-color: rgb(150, 209, 90);
+    
+}
+.Contenedor
+{
+    width: 80%;
+    height: 10%;
+}
+
+.row
+{
+    margin-left: 35%;
+    margin-top:  15%;
+    text-align: center;
+    
+}
+.row1
+{
+
+    border: rgb(22, 18, 16) solid;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+}
+.row2
+{
+
+    border: rgb(2, 2, 2) solid;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+}
+
+.row4{
+    
+    text-align: center;
+}
+
+.ocultar{
+    display: none;
+}
+
+.mostrar{
+    display: inline;
+}

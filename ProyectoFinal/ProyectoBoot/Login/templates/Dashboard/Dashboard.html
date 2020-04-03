@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        </head>
+        <body style="background-color: lightgreen;">
+            <div class=" mx-auto border-dark bg-white col  m-5 rounded" style="width: 900px; height: 500px;"> 
+                <img src="https://cdn.dribbble.com/users/1623266/screenshots/5090685/j.gif" alt="" class="float-left mt-5" style="width: 350px;">
+                <section class="container text-center mr-5 bg-dark text-white" style="width: 400px;">
+                    <h3><p class="pt-5 font-weight-bold bg-primary text-dark"> HOLA BIENVENIDO: {{request.user.username}}</p></h3>
+                    <br>
+                    <h5><p class=" font-weight-bold "> Nombre: {{request.user.first_name}}</p></h5>
+                    <br>
+                    <h5><p class=" font-weight-bold "> Apellido: {{request.user.last_name}}</p></h5>
+                    <br>
+                    <h5><p class=" font-weight-bold "> Correo: {{request.user.email}}</p></h5>
+                </section>
+                <br>
+                <br>
+                <br>
+                <a href="logout/" class="btn btn-danger ml-5 mt-3">Cerrar sesión</a>
+                <a href="{% url 'Landing:Landing' %}" class="btn btn-dark mr-5 mt-3" >Inicio</a>
+            </div>
+            
+        </body>
+    </html>

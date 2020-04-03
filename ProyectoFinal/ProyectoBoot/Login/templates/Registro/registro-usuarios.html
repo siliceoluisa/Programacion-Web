@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body style="background-color: lightskyblue;">
+        <div class="Contaneir">
+            <div class="mx-auto border border-dark bg-white col  m-5 rounded" style="text-align: center;width: 300px; height: 600px; width: 500px">
+                <img src="https://gifimage.net/wp-content/uploads/2017/11/gif-profile-picture-7.gif" alt="..." class="rounded-circle" style="width: 200px;">
+                <br>
+                <br>
+                <form action="" method="POST">
+                    {%csrf_token%}
+                    <br>
+                    {% if form_get.username.value %}
+                        {{ form_get.username }}
+                    {% else %}
+                        {{ form_get.username }}
+                    {% endif %}
+                    <br>
+                    {% if form_get.first_name.value %}
+                        {{ form_get.first_name }}
+                    {% else %}
+                        {{ form_get.first_name }}
+                    {% endif %}
+                    <br>
+                    {% if form_get.last_name.value %}
+                        {{ form_get.last_name }}
+                    {% else %}
+                        {{ form_get.last_name }}
+                    {% endif %}
+                    <br>
+                    {% if form_get.password.value %}
+                        {{ form_get.password }}
+                    {% else %}
+                        {{ form_get.password }}
+                    {% endif %}
+                    <br>
+                    {% if form_get.email.value %}
+                        {{ form_get.email }}
+                    {% else %}
+                        {{ form_get.email }}
+                    {% endif %}
+                    <br>
+                    <br>
+                    <a href="{% url 'Login:login' %}" class="btn btn-danger mr-5" >
+                        <i class="fa fa-home"></i> Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-dark">Registrate </button>
+                    <br>
+                    <br>
+                </form>
+
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
